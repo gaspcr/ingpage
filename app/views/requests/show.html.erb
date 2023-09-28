@@ -1,0 +1,20 @@
+<p><%= notice %></p>
+
+<p>
+    <strong>Solicitud:</strong>
+    <%= @request.descripcion %>
+<p/>
+
+<p>
+    <strong>Id usuario:</strong>
+    <%= @request.user_id %>
+<p/>
+
+<p>
+    <strong>Id publicacion:</strong>
+    <%= @request.publicacion_id %>
+<p/>
+
+<p><%= link_to 'Volver', requests_index_path %></p>
+<p><%= link_to 'Editar', requests_edit_path(@request.id) %></p>
+<p><%= link_to 'Eliminar', requests_delete_path(@request.id), method: :delete %></p>

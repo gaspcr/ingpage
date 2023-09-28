@@ -1,0 +1,20 @@
+<p><%= notice %></p>
+
+<p>
+    <strong>Mensaje:</strong>
+    <%= @message.contenido %>
+<p/>
+
+<p>
+    <strong>Id Envia:</strong>
+    <%= @message.from_id %>
+<p/>
+
+<p>
+    <strong>Id Recibe:</strong>
+    <%= @message.to_id %>
+<p/>
+
+<p><%= link_to 'Volver', messages_index_path %></p>
+<p><%= link_to 'Editar', messages_edit_path(@message.id) %></p>
+<p><%= link_to 'Eliminar', messages_delete_path(@message.id), method: :delete %></p>

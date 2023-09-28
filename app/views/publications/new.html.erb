@@ -1,0 +1,37 @@
+<h1>Nueva publicación</h1>
+
+<%= form_with(model: @publication, method: :post) do |form| %>
+    <div class="field">
+        <%= form.label :Título %>
+        <%= form.text_field :titulo %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Foto %>
+        <%= form.file_field :fotos %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Precio %>
+        <%= form.text_field :precio %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Raza %>
+        <%= form.text_field :especie %>
+    </div>
+
+    <div class="field">
+        <%= form.label :"Adopción o Venta"%>
+        <%= form.text_field :tipo %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Dirección %>
+        <%= form.text_field :direccion %>
+    </div>
+    <div class="action">
+        <%= form.submit "Crear publicación"%>
+    </div>
+<% end %>
+<p><%= link_to 'Cancelar', publications_index_path %></p>

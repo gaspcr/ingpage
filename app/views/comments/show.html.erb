@@ -1,0 +1,20 @@
+<p><%= notice %></p>
+
+<p>
+    <strong>Comentario:</strong>
+    <%= @comment.contenido %>
+<p/>
+
+<p>
+    <strong>Id usuario:</strong>
+    <%= @comment.user_id %>
+<p/>
+
+<p>
+    <strong>Id publicacion:</strong>
+    <%= @comment.publicacion_id %>
+<p/>
+
+<p><%= link_to 'Volver', comments_index_path %></p>
+<p><%= link_to 'Editar', comments_edit_path(@comment.id) %></p>
+<p><%= link_to 'Eliminar', comments_delete_path(@comment.id), method: :delete %></p>

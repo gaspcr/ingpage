@@ -1,0 +1,27 @@
+<h1>Editar solicitud</h1>
+
+<%= form_with(model: @request, method: :patch, url: requests_update_path) do |form| %>
+    <div class="field">
+        <%= form.label :ID_USUARIO %>
+        <%= form.text_field :user_id %>
+    </div>
+
+    <div class="field">
+        <%= form.label :ID_PUBLICACION %>
+        <%= form.text_field :publicacion_id %>
+    </div>
+
+    <div class="field">
+        <%= form.label :DESCRIPCION %>
+        <%= form.text_field :descripcion %>
+    </div>
+
+    <div class="action">
+        <%= form.submit "Editar Solicitud"%>
+    </div>
+<% end %>
+
+<%= link_to 'Volver', requests_show_path(@request.id) %>
+<%= link_to 'Listado de solicitudes', requests_index_path %>
+
+

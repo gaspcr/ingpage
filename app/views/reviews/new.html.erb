@@ -1,0 +1,26 @@
+<%= notice %>
+
+<h1>Evaluar</h1>
+
+<%= form_with(model: @review, method: :post) do |form|%>
+    <div class = "field">
+        <%= form.label :Evaluador %>
+        <%= form.text_field :from_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Evaluado %>
+        <%= form.text_field :to_id%>
+    </div>
+    <div class = "field">
+        <%= form.label :Evaluacion %>
+        <%= form.number_field :evaluacion , within: 1..10%>
+    </div>
+    <div class = "field">
+        <%= form.label :Comentario %>
+        <%= form.text_field :comentario%>
+    </div>
+
+    <div class = "action">
+        <%= form.submit "Enviar evaluacion" %>
+    </div>
+<% end %>

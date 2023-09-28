@@ -1,0 +1,32 @@
+<h1>Mensajes</h1>
+
+<p><%= notice %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID FROM - </th>
+            <th> ID TO - </th>
+            <th> MENSAJE - </th>
+            <th> ACCIONES</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @messages.each do |message| %>
+            <tr>
+                <td><%= message.from_id %></td>
+                <td><%= message.to_id %></td>
+                <td><%= message.contenido  %></td>
+                <td><%= link_to 'Ver', messages_show_path(message.id)%>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div>
+<%= link_to 'Inicio', pages_index_path %>
+</div>
+<div>
+<%= link_to 'Enviar mensaje', messages_new_path %>
+</div>

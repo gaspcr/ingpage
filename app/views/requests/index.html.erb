@@ -1,0 +1,32 @@
+<h1>Solicitudes</h1>
+
+<p><%= notice %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID USUARIO - </th>
+            <th> ID PUBLICACION - </th>
+            <th> DESCRIPCION - </th>
+            <th> ACCIONES</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @requests.each do |request| %>
+            <tr>
+                <td><%= request.user_id %></td>
+                <td><%= request.publicacion_id %></td>
+                <td><%= request.descripcion  %></td>
+                <td><%= link_to 'Ver', requests_show_path(request.id)%>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div>
+<%= link_to 'Inicio', pages_index_path %>
+</div>
+<div>
+<%= link_to 'Enviar solicitud', requests_new_path %>
+</div>

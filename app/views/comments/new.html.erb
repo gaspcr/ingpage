@@ -1,0 +1,22 @@
+<%= notice %>
+
+<h1>Crear comentario</h1>
+
+<%= form_with(model: @comment, method: :post) do |form|%>
+    <div class = "field">
+        <%= form.label :Usuario %>
+        <%= form.text_field :user_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Publicacion %>
+        <%= form.text_field :publicacion_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Contenido %>
+        <%= form.text_field :contenido %>
+    </div>
+
+    <div class = "action">
+        <%= form.submit "Publicar comentario" %>
+    </div>
+<% end %>

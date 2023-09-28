@@ -1,0 +1,32 @@
+<h1>EVALUACIONES</h1>
+
+<p><%= notice %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID EVALUADOR - </th>
+            <th> ID EVALUADO - </th>
+            <th> EVALUACION - </th>
+            <th> ACCIONES</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @reviews.each do |review| %>
+            <tr>
+                <td><%= review.from_id %></td>
+                <td><%= review.to_id %></td>
+                <td><%= review.evaluacion  %></td>
+                <td><%= link_to 'Ver', reviews_show_path(review.id)%>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div>
+<%= link_to 'Inicio', pages_index_path %>
+</div>
+<div>
+<%= link_to 'Enviar reseña', reviews_new_path %>
+</div>

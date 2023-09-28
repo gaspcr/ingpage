@@ -1,0 +1,32 @@
+<h1>Editar evaluacion</h1>
+
+<%= form_with(model: @review, method: :patch, url: reviews_update_path) do |form| %>
+    <div class="field">
+        <%= form.label :ID_EVALUADOR %>
+        <%= form.text_field :from_id %>
+    </div>
+
+    <div class="field">
+        <%= form.label :ID_EVALUADO %>
+        <%= form.text_field :to_id %>
+    </div>
+
+    <div class="field">
+        <%= form.label :EVALUACION %>
+        <%= form.number_field :evaluacion , within: 1..10%>
+    </div>
+
+    <div class="field">
+        <%= form.label :COMENTARIO %>
+        <%= form.text_field :comentario %>
+    </div>
+
+    <div class="action">
+        <%= form.submit "Editar Evaluacion"%>
+    </div>
+<% end %>
+
+<%= link_to 'Volver', reviews_show_path(@review.id) %>
+<%= link_to 'Listado de evaluaciones', reviews_index_path %>
+
+

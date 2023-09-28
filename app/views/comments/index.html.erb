@@ -1,0 +1,32 @@
+<h1>Comentarios</h1>
+
+<p><%= notice %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID USUARIO - </th>
+            <th> ID PUBLICACION - </th>
+            <th> COMENTARIO - </th>
+            <th> ACCIONES</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @comments.each do |comment| %>
+            <tr>
+                <td><%= comment.user_id %></td>
+                <td><%= comment.publicacion_id %></td>
+                <td><%= comment.contenido  %></td>
+                <td><%= link_to 'Ver', comments_show_path(comment.id)%>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div>
+<%= link_to 'Inicio', pages_index_path %>
+</div>
+<div>
+<%= link_to 'Crear comentario', comments_new_path %>
+</div>

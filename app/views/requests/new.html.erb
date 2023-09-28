@@ -1,0 +1,23 @@
+<%= notice %>
+
+<h1>Crear solicitud</h1>
+
+<%= form_with(model: @request, method: :post) do |form|%>
+    <div class = "field">
+        <%= form.label :Usuario %>
+        <%= form.text_field :user_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Publicacion %>
+        <%= form.text_field :publicacion_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Descripcion %>
+        <%= form.text_field :descripcion %>
+    </div>
+
+    <div class = "action">
+        <%= form.submit "Enviar solicitud" %>
+    </div>
+<% end %>
+

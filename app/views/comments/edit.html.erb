@@ -1,0 +1,27 @@
+<h1>Editar comentario</h1>
+
+<%= form_with(model: @comment, method: :patch, url: comments_update_path) do |form| %>
+    <div class="field">
+        <%= form.label :ID_USUARIO %>
+        <%= form.text_field :user_id %>
+    </div>
+
+    <div class="field">
+        <%= form.label :ID_PUBLICACION %>
+        <%= form.text_field :publicacion_id %>
+    </div>
+
+    <div class="field">
+        <%= form.label :CONTENIDO %>
+        <%= form.text_field :contenido %>
+    </div>
+
+    <div class="action">
+        <%= form.submit "Editar Comentario"%>
+    </div>
+<% end %>
+
+<%= link_to 'Volver', comments_show_path(@comment.id) %>
+<%= link_to 'Listado de comentarios', comments_index_path %>
+
+

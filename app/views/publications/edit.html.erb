@@ -1,0 +1,40 @@
+<h1>Editar publicación</h1>
+
+<%= form_with(model: @publication, method: :patch, url: publications_update_path) do |form| %>
+    <div class="field">
+        <%= form.label :Título %>
+        <%= form.text_field :titulo %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Precio %>
+        <%= form.text_field :precio %>
+    </div>
+
+    <div class="field">
+        <%= form.label :raza %>
+        <%= form.text_field :especie %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Imágenes %>
+        <%= form.text_field :fotos %>
+    </div>
+
+    <div class="field">
+        <%= form.label :"Tipo de publicación" %>
+        <%= form.text_field :tipo %>
+    </div>
+
+    <div class="field">
+        <%= form.label :Dirección %>
+        <%= form.text_field :direccion %>
+    </div>
+
+    <div class="action">
+        <%= form.submit "Editar Publicacion"%>
+    </div>
+<% end %>
+
+<%= link_to 'Volver', publications_show_path(@publication.id) %>
+<%= link_to 'Ir a publicaciones', publications_index_path %>

@@ -1,0 +1,25 @@
+<p><%= notice %></p>
+
+<p>
+    <strong>Evaluacion:</strong>
+    <%= @review.evaluacion %>
+<p/>
+
+<p>
+    <strong>Comentario:</strong>
+    <%= @review.comentario %>
+<p/>
+
+<p>
+    <strong>Id evaluador:</strong>
+    <%= @review.from_id %>
+<p/>
+
+<p>
+    <strong>Id evaluado:</strong>
+    <%= @review.to_id %>
+<p/>
+
+<p><%= link_to 'Volver', reviews_index_path %></p>
+<p><%= link_to 'Editar', reviews_edit_path(@review.id) %></p>
+<p><%= link_to 'Eliminar', reviews_delete_path(@review.id), method: :delete %></p>

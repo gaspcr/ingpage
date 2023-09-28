@@ -1,0 +1,20 @@
+<p><%= notice %></p>
+
+<p>
+    <strong>Título:</strong>
+    <%= @publication.titulo %>
+<p/>
+
+<p>
+    <strong>Foto:</strong>
+    <%= image_tag @publication.fotos.url %>
+<p/>
+
+<p>
+    <strong>Dirección:</strong>
+    <%= @publication.direccion %>
+<p/>
+
+<p><%= link_to 'Volver', publications_index_path %></p>
+<p><%= link_to 'Editar', publications_edit_path(@publication.id) %></p>
+<p><%= link_to 'Eliminar', publications_delete_path(@publication.id), method: :delete %></p>

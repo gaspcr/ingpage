@@ -1,0 +1,29 @@
+require: 
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec 
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'config/environments/**/*'
+    - 'config/initializers/**/*'
+    - 'Gemfile.lock'
+
+
+Metrics/LineLength:
+  Max: 100
+  
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+  
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+  
+Style/Documentation:
+  Enabled: false

@@ -1,0 +1,22 @@
+<%= notice %>
+
+<h1>Enviar mensaje</h1>
+
+<%= form_with(model: @message, method: :post) do |form|%>
+    <div class = "field">
+        <%= form.label :De %>
+        <%= form.text_field :from_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Para %>
+        <%= form.text_field :to_id %>
+    </div>
+    <div class = "field">
+        <%= form.label :Mensaje %>
+        <%= form.text_field :contenido %>
+    </div>
+
+    <div class = "action">
+        <%= form.submit "Enviar mensaje" %>
+    </div>
+<% end %>
